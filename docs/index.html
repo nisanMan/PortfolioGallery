@@ -5,213 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Nisan Sher's portfolio showcasing projects and certifications in data science, machine learning, and quantum computing.">
     <title>Nisan Sher Portfolio</title>
-    <style>
-        :root {
-            --main-color: #82d9f3;
-            --hover-color: #0056b3;
-            --text-color: #000;
-            --font-family: 'Arial', sans-serif;
-        }
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            overflow: auto;
-            position: relative;
-            font-family: var(--font-family);
-        }
-
-        h1 {
-            text-align: center;
-            color: var(--text-color);
-            font-size: 72px;
-        }
-
-        h2 {
-            text-align: center;
-            color: var(--text-color);
-            font-size: 48px;
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
-
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-            font-size: 30px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            border-radius: 50px;
-            background-color: var(--main-color);
-            color: var(--text-color);
-            text-decoration: none;
-            transition: background-color 0.3s;
-            margin: 10px;
-        }
-
-        .button:hover {
-            background-color: var(--hover-color);
-        }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        figure {
-            display: flex;
-            align-items: center;
-            margin: 20px;
-            text-align: left;
-            max-width: 500px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 10px;
-        }
-
-        figure img {
-            width: 150px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s;
-            cursor: pointer;
-            margin-right: 20px;
-        }
-
-        figure img:hover {
-            transform: scale(1.1);
-        }
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            flex: 1;
-        }
-
-        figcaption {
-            font-size: 22px;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .description {
-            font-size: 18px;
-            color: #555;
-        }
-
-        /* Media queries for responsiveness */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 48px;
-            }
-
-            h2 {
-                font-size: 36px;
-            }
-
-            .button {
-                font-size: 24px;
-                padding: 10px 20px;
-            }
-
-            figure {
-                flex-direction: column;
-                align-items: center;
-                max-width: 100%;
-                padding: 10px;
-            }
-
-            figure img {
-                width: 150px; /* Ensure image stays small on small screens */
-                height: 100px; /* Ensure image stays small on small screens */
-                margin: 0 0 10px 0; /* Adjust margins for smaller screens */
-            }
-
-            .content {
-                align-items: center;
-                text-align: center;
-            }
-        }
-    </style>
+    
 </head>
+<!-- Scroll to top button -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
+
+<!-- Navbar -->
+<!-- <div class="navbar">
+    <div class="brand">Your Logo</div>
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div> -->
+
 <body>
-
     <h1>Nisan Sher - Data Analyst</h1>
-
     <div class="button-container">
         <a href="https://www.linkedin.com/in/nisan-sher/" target="_blank" class="button">LinkedIn</a>
         <a href="https://github.com/nisanMan/" target="_blank" class="button">GitHub</a>
         <a href="https://www.kaggle.com/nisansher" target="_blank" class="button">Kaggle</a>
     </div>
-    <div class="gallery">
-        <figure>
-            <a href="https://github.com/nisanMan/ML-Projects/blob/master/Digit%20Recognizer/Math%20for%20ML/%F0%9F%A4%96Neural%20network%204layer%203Activation%20Score%2089%25.ipynb" target="_blank">
-                <img src="images/ann.png" alt="Neural Network Digit Recognizer">
-            </a>
-            <div class="content">
-                <figcaption>CNN - Digit Recognizer</figcaption>
-                <div class="description">A convolutional neural network project for recognizing digits with high accuracy.</div>
-            </div>
-        </figure>
 
-        <figure>
-            <a href="https://github.com/nisanMan/PythagoreanTree/blob/master/README.md" target="_blank">
-                <img src="images/Pythagorean treeb.png" alt="Pythagorean Tree using NumPy and OpenCV">
-            </a>
-            <div class="content">
-                <figcaption>NumPy & OpenCV</figcaption>
-                <div class="description">An implementation of the Pythagorean Tree using NumPy and OpenCV libraries.</div>
-            </div>
-        </figure>
-
-        <figure>
-            <a href="https://github.com/nisanMan/ML-Projects/blob/master/Digit%20Recognizer/Math%20for%20ML/SVD.ipynb" target="_blank">
-                <img src="images/image illustrating SVD.png" alt="Singular Value Decomposition for Data Compression">
-            </a>
-            <div class="content">
-                <figcaption>SVD - Data Compression</figcaption>
-                <div class="description">Utilizing Singular Value Decomposition for effective data compression.</div>
-            </div>
-        </figure>
-
-        <figure>
-            <a href="https://github.com/nisanMan/QuantumComputing/blob/master/Quantum%20computing.ipynb" target="_blank">
-                <img src="images/Q.png" alt="Quantum Computing">
-            </a>
-            <div class="content">
-                <figcaption>Quantum Computing</figcaption>
-                <div class="description">Exploring concepts and applications in quantum computing.</div>
-            </div>
-        </figure>
-
-        <figure>
-            <a href="https://nisanman.github.io/NegevRainAnnual/#/" target="_blank">
-                <img src="images/plots.png" alt="Exploratory Data Analysis of Negev Rain Annual Data">
-            </a>
-            <div class="content">
-                <figcaption>EDA - Negev Rain Annual</figcaption>
-                <div class="description">An exploratory data analysis of annual rainfall data in the Negev region.</div>
-            </div>
-        </figure>
-    </div>
-
-    <h2>Certificates</h2>
+    <h2>education and Certificates</h2>
 
     <div class="gallery">
+        <!-- Degree: B.Sc. in Mathematics -->
         <figure>
+            <a href="" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcOlmXb86zEXCp3caREvq9xYHsljfrFFAqeg&s" alt="B.Sc. in Mathematics Icon">
+            </a>
+            <div class="content">
+                <figcaption>B.Sc. in Mathematics</figcaption>
+                <div class="description">Bachelor of Science in Mathematics, Tel Aviv University, 2022.</div>
+            </div>
+        </figure>
+
+        <!-- Certificate: Google Advanced Data Analytics -->
+        <figure>
+            <a href="https://www.credly.com/badges/e81e2d15-ed99-4264-a143-5ac090ce7c4d/public_url" target="_blank">
+                <img src="https://images.credly.com/size/220x220/images/9267a387-1a51-4ebe-8c05-976a5ec4c3d0/image.png" alt="Google Data Analytics Certificate">
+            </a>
+            <div class="content">
+                <figcaption>Google: Advanced Data Analytics Professional</figcaption>
+                <div class="description">Official certification from Google, issued in 2025 via Credly.</div>
+            </div>
+        </figure>
+        <!-- Certificate 1 -->
+
+
+        <figure>
+            
+            <div class="content">
+            </div>
+            <a href="https://www.hackerrank.com/certificates/3b9ab7240b45" target="_blank">
+                <img src="images/SQL Advanced.png" alt="HackerRank SQL Advanced Certificate">
+            </a>
+
+            <!-- Certificate 2 -->
+
+            <a href="https://www.udemy.com/certificate/UC-b60314cf-e82e-420f-96f1-69e29d7061ad/" target="_blank">
+                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-b60314cf-e82e-420f-96f1-69e29d7061ad.jpg" alt="Udemy Data Science & ML Certificate">
+            </a>
+
+
+            <!-- Certificate 3 -->
+            <a href="https://www.freecodecamp.org/certification/fccc2a24ebd-2154-4967-a673-1ba7098429e0/data-visualization" target="_blank">
+                <img src="images/viz.png" alt="freeCodeCamp Data Visualization Certificate">
+            </a>
+            <figcaption>More Certificates</figcaption>
+        </figure>
+        <!-- <figure>
             <a href="https://www.hackerrank.com/certificates/3b9ab7240b45" target="_blank">
                 <img src="images/SQL Advanced.png" alt="HackerRank SQL Advanced Certificate">
             </a>
@@ -220,7 +95,7 @@
                 <div class="description">Advanced SQL certification from HackerRank.</div>
             </div>
         </figure>
-        
+
         <figure>
             <a href="https://www.udemy.com/certificate/UC-b60314cf-e82e-420f-96f1-69e29d7061ad/" target="_blank">
                 <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-b60314cf-e82e-420f-96f1-69e29d7061ad.jpg" alt="Udemy Data Science & ML Certificate">
@@ -239,26 +114,71 @@
                 <figcaption>Data Visualization</figcaption>
                 <div class="description">Data Visualization certification from freeCodeCamp.</div>
             </div>
-        </figure>
+        </figure> -->
+    </div>
 
+    <h2>Project</h2>
+
+    <div class="gallery">
+        <!-- Project 1 -->
         <figure>
-            <a href="https://www.coursera.org/account/accomplishments/certificate/98YRTGF4MWZ5" target="_blank">
-                <img src="images/Google 2.png" alt="Coursera Get Started with Python Certificate">
+            <a href="https://github.com/nisanMan/ML-Projects/blob/master/Digit%20Recognizer/Math%20for%20ML/%F0%9F%A4%96Neural%20network%204layer%203Activation%20Score%2089%25.ipynb" target="_blank">
+                <img src="images/ann.png" alt="Neural Network Digit Recognizer">
             </a>
             <div class="content">
-                <figcaption>Get Started with Python</figcaption>
-                <div class="description">Introductory Python course certification from Coursera.</div>
+                <figcaption>CNN - Digit Recognizer</figcaption>
+                <div class="description">A convolutional neural network project for recognizing digits with high accuracy.</div>
             </div>
         </figure>
 
+        <!-- Project 2 -->
         <figure>
-            <a href="https://www.coursera.org/account/accomplishments/verify/W3Z8MU4A3X94" target="_blank">
-                <img src="images/Google 3.png" alt="Coursera The Power of Statistics Certificate">
+            <a href="https://github.com/nisanMan/PythagoreanTree/blob/master/README.md" target="_blank">
+                <img src="https://github.com/nisanMan/PythagoreanTree/blob/master/output/Pythagorean%20treeb.png?raw=true" alt="Pythagorean Tree using NumPy and OpenCV">
             </a>
             <div class="content">
-                <figcaption>The Power of Statistics</figcaption>
-                <div class="description">Certification in the Power of Statistics from Coursera.</div>
+                <figcaption>NumPy & OpenCV</figcaption>
+                <div class="description">An implementation of the Pythagorean Tree using NumPy and OpenCV libraries.</div>
             </div>
         </figure>
+
+        <!-- Project 3 -->
+        <figure>
+            <a href="https://github.com/nisanMan/ML-Projects/blob/master/Digit%20Recognizer/Math%20for%20ML/SVD.ipynb" target="_blank">
+                <img src="images/image illustrating SVD.png" alt="Singular Value Decomposition for Data Compression">
+            </a>
+            <div class="content">
+                <figcaption>SVD - Data Compression</figcaption>
+                <div class="description">Utilizing Singular Value Decomposition for effective data compression.</div>
+            </div>
+        </figure>
+
+        <!-- Project 4 -->
+        <figure>
+            <a href="https://github.com/nisanMan/QuantumComputing/blob/master/Quantum%20computing.ipynb" target="_blank">
+                <img src="images/Q.png" alt="Quantum Computing">
+            </a>
+            <div class="content">
+                <figcaption>Quantum Computing</figcaption>
+                <div class="description">Exploring concepts and applications in quantum computing.</div>
+            </div>
+        </figure>
+
+        <!-- Project 5 -->
+        <figure>
+            <a href="https://nisanman.github.io/NegevRainAnnual/#/" target="_blank">
+                <img src="images/plots.png" alt="Exploratory Data Analysis of Negev Rain Annual Data">
+            </a>
+            <div class="content">
+                <figcaption>EDA - Negev Rain Annual</figcaption>
+                <div class="description">An exploratory data analysis of annual rainfall data in the Negev region.</div>
+            </div>
+        </figure>
+    </div>
+
+
+
+
+    
 </body>
 </html>
