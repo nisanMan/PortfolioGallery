@@ -1,3 +1,7 @@
 # PortfolioGallery
 
-My personal portfolio site.
+My personal portfolio site.  
+
+```bash
+git checkout v1.0 
+```

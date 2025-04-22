@@ -23,42 +23,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-// Toggle dark mode
-const toggle = document.createElement('button');
-toggle.innerText = '🌙';
-toggle.style.position = 'fixed';
-toggle.style.top = '20px';
-toggle.style.right = '20px';
-toggle.style.zIndex = '1000';
-toggle.style.padding = '10px 10px';
-toggle.style.border = '1px solid #ccc';
-toggle.style.borderRadius = '5px';
-toggle.style.fontSize = '18px';
-toggle.style.cursor = 'pointer';
-toggle.style.transition = 'all 0.3s ease';
+    // Toggle dark mode
+    const toggle = document.createElement('button');
+    toggle.innerText = '🌙';
+    toggle.style.position = 'fixed';
+    toggle.style.top = '20px';
+    toggle.style.right = '20px';
+    toggle.style.zIndex = '1000';
+    toggle.style.padding = '10px 10px';
+    toggle.style.border = '1px solid #ccc';
+    toggle.style.borderRadius = '5px';
+    toggle.style.fontSize = '18px';
+    toggle.style.cursor = 'pointer';
+    toggle.style.transition = 'all 0.3s ease';
 
-function updateButtonStyle(isDark) {
-    if (isDark) {
-        toggle.innerText = '☀️';
-        toggle.style.backgroundColor = '#222';
-        toggle.style.color = '#f0f0f0';
-        toggle.style.borderColor = '#555';
-    } else {
-        toggle.innerText = '🌙';
-        toggle.style.backgroundColor = '#fff';
-        toggle.style.color = '#222';
-        toggle.style.borderColor = '#ccc';
+    function updateButtonStyle(isDark) {
+        if (isDark) {
+            toggle.innerText = '☀️';
+            toggle.style.backgroundColor = '#222';
+            toggle.style.color = '#f0f0f0';
+            toggle.style.borderColor = '#555';
+        } else {
+            toggle.innerText = '🌙';
+            toggle.style.backgroundColor = '#fff';
+            toggle.style.color = '#222';
+            toggle.style.borderColor = '#ccc';
+        }
     }
-}
 
-document.body.appendChild(toggle);
-updateButtonStyle(false); // suny 
+    document.body.appendChild(toggle);
+    updateButtonStyle(false); // suny 
 
-toggle.addEventListener('click', () => {
-    const isDark = document.body.classList.toggle('dark-mode');
-    updateButtonStyle(isDark);
-});
+    toggle.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark-mode');
+        updateButtonStyle(isDark);
 
+        // Change URL based on dark mode state
+        if (isDark) {
+           window.location.hash = "#theme=dark";
+        } else {
+            window.location.hash = "";
+        }
+    });
 
     // Scroll to top button visibility
     window.onscroll = function() {
@@ -80,6 +86,6 @@ toggle.addEventListener('click', () => {
         var menu = document.querySelector('.navbar .menu');
         menu.classList.toggle('active');
     }
-
 });
+
 

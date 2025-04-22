@@ -114,6 +114,7 @@ figcaption {
     color: #555;
 }
 
+  
 @media (max-width: 768px) {
     h1 {
         font-size: 48px;
@@ -145,6 +146,11 @@ figcaption {
         align-items: center;
         text-align: center;
     }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
 }
 
 
@@ -173,6 +179,7 @@ figcaption {
 body.dark-mode {
     background-color: #353535;
     --text-color: #f0f0f0;
+    color: #e0e0e0; /*del?*/
 }
 
 body.dark-mode h1,
@@ -190,7 +197,13 @@ body.dark-mode .button {
 body.dark-mode .button:hover {
     background-color: #00254c;
 }
+  
 
+  
+.dark-mode figure {
+    border-color: #555;
+}  
+  
 /* Scroll to top button */
 /* #scrollTopBtn {
     display: none;
