@@ -54,17 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(toggle);
     updateButtonStyle(false); // suny 
 
-    toggle.addEventListener('click', () => {
-        const isDark = document.body.classList.toggle('dark-mode');
-        updateButtonStyle(isDark);
+    // toggle.addEventListener('click', () => {
+    //     const isDark = document.body.classList.toggle('dark-mode');
+    //     updateButtonStyle(isDark);
 
-        // Change URL based on dark mode state
-        if (isDark) {
-           window.location.hash = "#theme=dark";
-        } else {
-            window.location.hash = "";
-        }
-    });
+    //     // Change URL based on dark mode state
+    //     if (isDark) {
+    //        window.location.hash = "#theme=dark";
+    //     } else {
+    //         window.location.hash = "";
+    //     }
+    // });
 
     // Scroll to top button visibility
     window.onscroll = function() {
