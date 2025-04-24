@@ -89,3 +89,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".lazy-img").forEach(img => {
+    const realSrc = img.dataset.src;
+    const newImg = new Image();
+    newImg.src = realSrc;
+    newImg.onload = () => {
+      img.src = realSrc;
+      img.style.filter = "none";
+    };
+  });
+});

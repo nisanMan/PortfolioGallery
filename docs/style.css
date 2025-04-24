@@ -317,3 +317,26 @@ body.dark-mode #scrollTopBtn {
         display: flex;
     }
 }
+
+.lazy-img {
+    filter: blur(10px);
+    transition: filter 0.3s ease;
+}
+
+
+/* .light-img {
+    display: inline;
+}
+  
+.dark-img {
+    display: none;
+}
+  
+@media (prefers-color-scheme: dark) {
+    .light-img {
+      display: none;
+    }
+    .dark-img {
+      display: inline;
+    }
+} */
